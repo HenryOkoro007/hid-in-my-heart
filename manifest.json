@@ -1,0 +1,17 @@
+{
+  "name": "Hid in my heart — Bible Memory Verse Trainer",
+  "short_name": "Hid in my heart",
+  "description": "Memorize Scripture with a guided course and practice modes: fade, first letters, typing and spoken recital.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#EDF1F5",
+  "theme_color": "#16233B",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
