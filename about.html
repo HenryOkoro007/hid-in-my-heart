@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hid in my heart — Bible Memory Verse Trainer</title>
 <meta name="description" content="A free Bible memory app with a guided 12-module course and four ways to practice: fade, first letters, typing and spoken recital. Works offline.">
@@ -10,7 +12,7 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
 <style>
-:root { --bg:#EDF1F5; --surface:#F8FAFC; --ink:#16233B; --soft:#55627A; --line:#CBD5E1; --accent:#B4761A; --accent-ink:#fff; }
+:root { --bg:#EDF1F5; --surface:#F8FAFC; --ink:#16233B; --soft:#55627A; --line:#CBD5E1; --accent:#8A5A12; --accent-ink:#fff; }
 @media (prefers-color-scheme: dark) { :root { --bg:#0F1829; --surface:#172238; --ink:#E7ECF4; --soft:#9AA7BE; --line:#2B3957; --accent:#E2AE4A; --accent-ink:#1A1305; } }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
@@ -20,7 +22,7 @@ body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui
 h1 { font:500 clamp(2rem,6vw,3rem)/1.1 Georgia,"Times New Roman",serif; margin:0 0 10px; letter-spacing:-.01em; }
 .tag { font-size:1.15rem; color:var(--soft); max-width:560px; margin:0 0 24px; }
 .cta { display:flex; flex-wrap:wrap; gap:12px; }
-.btn { display:inline-block; padding:13px 22px; border-radius:10px; font-weight:600; text-decoration:none; border:1px solid var(--accent); }
+.btn { display:inline-block; padding:13px 22px; min-height:44px; border-radius:10px; font-weight:600; text-decoration:none; border:1px solid var(--accent); }
 .btn.primary { background:var(--accent); color:var(--accent-ink); }
 .btn.ghost { color:var(--ink); border-color:var(--line); }
 .btn:focus-visible, a:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
@@ -34,7 +36,8 @@ ol.levels { padding-left:20px; margin:0; }
 ol.levels li { margin:0 0 8px; }
 .support { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:20px; }
 footer { padding:30px 0 56px; color:var(--soft); font-size:.9rem; border-top:1px solid var(--line); }
-footer a { color:var(--accent); font-weight:600; }
+footer a { color:var(--accent); font-weight:600; display:inline-block; padding:11px 2px; }
+.small { color:var(--soft); font-size:.9rem; }
 </style>
 </head>
 <body>
@@ -69,8 +72,8 @@ footer a { color:var(--accent); font-weight:600; }
     <h2 id="why">Built to be used</h2>
     <div class="grid">
       <div class="card"><h3>Review reminders</h3><p>Rate how well you know each passage and the app shows what's due.</p></div>
-      <div class="card"><h3>Three translations built in</h3><p>KJV, ASV and Bible in Basic English, plus your own pasted text for NIV, NLT or NKJV.</p></div>
-      <div class="card"><h3>Private by design</h3><p>No account. Your progress stays on your device.</p></div>
+      <div class="card"><h3>Three translations built in</h3><p>KJV, ASV and Bible in Basic English, all public domain. Links open NIV, NLT and NKJV on BibleGateway.</p></div>
+      <div class="card"><h3>Private by design</h3><p>No account, no cookies, no tracking. Your progress stays on your device, and you can export or delete it any time.</p></div>
     </div>
   </section>
 
@@ -78,7 +81,9 @@ footer a { color:var(--accent); font-weight:600; }
     <h2 id="supporth">Support this ministry</h2>
     <div class="support">
       <p>This app is free. If it has helped you hide God's Word in your heart, you can help keep it free and growing.</p>
-      <p><a class="btn primary" href="https://ko-fi.com/YOUR-NAME" rel="noopener">Give a gift</a></p>
+      <!-- TODO before launch: replace YOUR-NAME with the real Ko-fi page name. -->
+      <p><a class="btn primary" href="https://ko-fi.com/YOUR-NAME" target="_blank" rel="noopener noreferrer" data-leave="Ko-fi">Give a gift</a></p>
+      <p class="small">Gifts are handled by Ko-fi on its own site, under its own privacy policy. This app never sees your payment details.</p>
     </div>
   </section>
 
@@ -86,5 +91,6 @@ footer a { color:var(--accent); font-weight:600; }
     <a href="index.html">Open the app</a> · <a href="privacy.html">Privacy policy</a>
   </footer>
 </div>
+<script src="external.js"></script>
 </body>
 </html>
