@@ -5,7 +5,7 @@ var HID_TEXT_BOOKS = ["1-corinthians","1-john","1-peter","1-thessalonians","1-ti
 function startApp(TEXT) {
   "use strict";
 
-  var APP_VERSION = "v14 (28 Oct 2026)";
+  var APP_VERSION = "v15 (28 Oct 2026)";
   var INSECURE = window.isSecureContext === false;
   var FILE_MSG = "You’ve opened this page as a file on your device. Phones only allow the microphone on a web address that starts with https://. Open your hosted github.io link instead.";
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
