@@ -1,6 +1,6 @@
 # Compliance record
 
-Last reviewed: 28 October 2026 (app v15, service worker cache `hid-v6`, storage schema 2).
+Last reviewed: 28 October 2026 (app v16, service worker cache `hid-v7`, storage schema 2).
 
 This file records what the app sends, stores, caches and ships, so the privacy page can be checked against the code. Update it in the same change as any code that alters one of these lists. `npm test` checks most of it automatically (see `tests/site.test.js`).
 

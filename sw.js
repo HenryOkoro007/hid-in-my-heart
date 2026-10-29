@@ -1,7 +1,7 @@
 /* Service worker: makes the app work offline.
    Bump CACHE_VERSION on every release. A new version waits until the person taps "Update now"
    in the app (never a silent swap); then old caches are deleted. Only this site's own files are cached. */
-var CACHE_VERSION = "hid-v6";
+var CACHE_VERSION = "hid-v7";
 var CORE = [
   "./",
   "./index.html",
